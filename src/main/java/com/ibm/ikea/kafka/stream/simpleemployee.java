@@ -11,7 +11,6 @@ import java.util.Properties;
 
 public class simpleemployee {
     public static void main(String[] args) {
-        System.out.println("Hello Alok");
         Properties prop = new Properties();
         prop.put(StreamsConfig.APPLICATION_ID_CONFIG,"streams-emp-start");
         prop.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG,"10.164.0.16:9082");

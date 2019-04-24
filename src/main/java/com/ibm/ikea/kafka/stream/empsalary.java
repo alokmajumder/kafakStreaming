@@ -20,13 +20,12 @@ public class empsalary {
 
         KStreamBuilder builder = new KStreamBuilder();
         KStream<String,String> emprecord = builder.stream("avro-schema-test");
-
-        KStream<String, String> empfilter = emprecord.filter((key, value) -> value.contains("Anshul"));
-        empfilter.to("avro-schema-out");
-
+       //KStream<String, String> empfilter = emprecord.filter((key, value) -> value.contains("Anshul"));
+        emprecord.to("emp-topic-filter");
         KafkaStreams streams = new KafkaStreams(builder, prop);
         streams.cleanUp();
         streams.start();
+        System.out.println(streams.toString());
         Runtime.getRuntime().addShutdownHook(new Thread(streams::close));
 
     }
