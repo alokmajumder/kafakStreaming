@@ -9,7 +9,7 @@ import org.apache.kafka.streams.kstream.KStreamBuilder;
 
 import java.util.Properties;
 
-public class empaggregate {
+public class simpleemployee {
     public static void main(String[] args) {
         System.out.println("Hello Alok");
         Properties prop = new Properties();
