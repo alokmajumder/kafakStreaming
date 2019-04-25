@@ -1,0 +1,6 @@
+{"type":"record",
+"namespace":"com.ibm.ikea.kafka.stream",
+"name":"emprecord",
+"fields":[{"name":"empname","type":"string"},
+          {"name":"deptname","type":"string"},
+		  {"name":"salary","type":"long"}]}
